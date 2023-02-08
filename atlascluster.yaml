@@ -1,0 +1,13 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasDeployment
+metadata:
+  name: "my-atlas-cluster"
+spec:
+  projectRef:
+    name: projectName #replace projectName with actual Project Name
+  deploymentSpec:
+    name: "newakocluster" #name of the cluster
+    providerSettings:
+      instanceSizeName: M20
+      providerName: AWS
+      regionName: US_EAST_1

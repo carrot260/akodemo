@@ -1,0 +1,15 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasDatabaseUser
+metadata:
+  name: my-database-user
+  labels:
+    app.kubernetes.io/version: 1.6.0
+spec:
+  roles:
+    - roleName: "readWriteAnyDatabase"
+      databaseName: "admin"
+  projectRef:
+    name: projectName # replace projectName
+  username: theuser # replace theuser with actual username
+  passwordSecretRef:
+    name: mysupersecretpassword # create secret and label secret. Follow steps listed under README.md

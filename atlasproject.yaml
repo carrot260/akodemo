@@ -1,0 +1,9 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasProject
+metadata:
+  name: projectName #replace projectName with actual Project Name
+spec:
+  name: projectName #replace projectName with actual Project Name
+  projectIpAccessList:
+    - ipAddress: "8.8.8.8" #replace 8.8.8.8 with application server IP
+      comment: "IP address for Application Server A"
