@@ -60,6 +60,7 @@ kubectl apply -f atlascluster.yaml
 ```
 
 10. Create database user using following steps:
+
 10(a): Create a secret for database user password.
 ```
 kubectl create secret generic mysupersecretpassword --from-literal="password=secre@tpassword"
@@ -74,6 +75,7 @@ kubectl apply -f atlasdatabaseuser.yaml
 ```
 
 11. Delete resources using the following steps:
+
 11(a): Delete atlas cluster:
 ```
 kubectl delete -f atlascluster.yaml
