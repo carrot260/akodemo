@@ -2,7 +2,7 @@
 
 ### Prerequisites:
 
-1. Install kubectl command line tool. Please refer to kubenetes documentaiton for exact steps (https://kubernetes.io/docs/tasks/tools/)
+1. Install kubectl command line tool. Please refer to kubernetes documentation for exact steps (https://kubernetes.io/docs/tasks/tools/)
 2. Install minikube. Please refer to minikube documentation for exact steps (https://minikube.sigs.k8s.io/docs/start/)
 3. Create an Atlas Project.
 4. Create API keys for the Atlas Project (Step 3)
@@ -20,7 +20,7 @@ If you have already cloned the repo locally, you can deploy the operator using t
 ```
 kubectl get namespace
 ```
-3. Set context using the following command. Use `--namespace` option to specify namepsace. (eg: mongodb-atlas-system)
+3. Set context using the following command. Use `--namespace` option to specify namespace. (eg: mongodb-atlas-system)
 ```
 kubectl config set-context --current --namespace=mongodb-atlas-system
 ```
@@ -44,7 +44,7 @@ kubectl create secret generic mongodb-atlas-operator-api-key \
     -n mongodb-atlas-system
 ```
 
-7. Label Secret using the following command. Specify secret name (eg: mongodb-atlas-operator-api-key). Use `-n` to specify namespace.
+7. Label Secret using the following command. Specify a secret name (eg: mongodb-atlas-operator-api-key). Use `-n` to specify namespace.
 ```
 kubectl label secret mongodb-atlas-operator-api-key atlas.mongodb.com/type=credentials -n mongodb-atlas-system
 ```
@@ -65,7 +65,7 @@ kubectl apply -f atlascluster.yaml
 ```
 kubectl create secret generic mysupersecretpassword --from-literal="password=secre@tpassword"
 ```
-10(b): Label database user password.
+10(b): Label secret.
 ```
 kubectl label secret mysupersecretpassword atlas.mongodb.com/type=credentials
 ```
